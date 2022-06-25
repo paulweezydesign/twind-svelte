@@ -1,0 +1,11 @@
+import { setup } from 'twind';
+import tailwindConfig from '../tailwind.config';
+
+setup(tailwindConfig);
+
+import HMR from '@roxi/routify/hmr';
+import App from './App.svelte';
+
+const app = HMR(App, { target: document.body }, 'routify-app');
+
+export default app;
